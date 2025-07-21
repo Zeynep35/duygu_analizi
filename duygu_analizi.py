@@ -1,11 +1,15 @@
 from transformers import pipeline
 
-text = input("Lütfen analiz etmek istediğiniz cümleyi giriniz: ")
 
-classifier = pipeline("sentiment-analysis")
+classifier = pipeline(
+    "sentiment-analysis",
+    model = "distilbert/distilbert-base-uncased-finetuned-sst-2-english")
 
-result = classifier(text)[0]
+def analiz_yap(text):
+    result = classifier(text)[0]
 
-print(f"Cümle: {text}")
-print(f"Duygu: {result['label']}")
-print(f"Skor: {result['score']:.3f}")
+    return {
+        "text" : text,
+        "label": result['label'],
+        "score" : result['score']
+    }
