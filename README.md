@@ -1,6 +1,6 @@
 # Duygu Analizi Projesi 
 
-Bu proje, kullanıcıdan alınan metni analiz ederek olumlu, olumsuz veya nötr duygu içerip içermediğini belirler.  
+Bu proje, kullanıcıdan alınan metni analiz ederek olumlu, olumsuz veya nötr duygu içerip içermediğini belirler. Ve bunu kullanıcıya streamlit arayüzü üzerinden gösterir. 
 Hugging Face üzerindeki önceden eğitilmiş transformer modeli kullanılmıştır.
 
 ---
@@ -15,7 +15,7 @@ pip install -r requirements.txt
 
 2. Python dosyasını çalıştırın:
 
-python sentiment_analysis.py
+streamlit run app.py
 
 3. Bu projede aşağıdaki model kullanılmıştır:
 
@@ -36,7 +36,7 @@ Skor: 0.998
 
 duygu-analizi/
 ├── app.py                  
-├── sentiment_analysis.py   
+├── duygu_analizi.py   
 ├── requirements.txt        
 ├── README.md               
 └── .gitignore              
